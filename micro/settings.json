@@ -1,0 +1,10 @@
+{
+    "colorscheme": "dracula-tc",
+    "eofnewline": false,
+    "initlua": true,
+    "savehistory": false,
+    "tabhighlight": true,
+    "tabreverse": false,
+    "tabsize": 2,
+    "tabstospaces": true
+}
