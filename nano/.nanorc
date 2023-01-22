@@ -4,8 +4,8 @@ set nonewlines
 set tabstospaces
 set tabsize 4
 
-set titlecolor brightwhite,brightcyan
-set statuscolor brightcyan
-set keycolor brightcyan
-set numbercolor brightcyan
+set titlecolor brightwhite,gray
+set statuscolor gray
+set keycolor gray
+set numbercolor #B4E
 set errorcolor brightwhite,red
