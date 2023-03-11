@@ -4,12 +4,12 @@ color-link identifier "#50FA7B"
 color-link identifier.class "#8BE9FD"
 color-link identifier.var "#F8F8F2"
 
-color-link constant "#BD93F9"
+color-link constant "#FF79C6"
 color-link constant.number "#F8F8F2"
 color-link constant.string "#F1FA8C"
 
 color-link symbol "#FF79C6"
-color-link symbol.brackets "#F8F8F2"
+color-link symbol.brackets "#FF79C6"
 color-link symbol.tag "#AE81FF"
 
 color-link type "italic #8BE9FD"
@@ -20,7 +20,7 @@ color-link statement "#FF79C6"
 color-link preproc "#FF79C6"
 
 color-link underlined "#FF79C6"
-color-link error "bold #FF5555"
+color-link error "bold #FF6C60"
 color-link todo "bold #FF79C6,#33292f"
 
 color-link diff-added "#50FA7B"
@@ -40,3 +40,4 @@ color-link current-line-number "#F8F8F2"
 color-link cursor-line "#44475A,#F8F8F2"
 color-link color-column "#44475A"
 color-link type.extended "default"
+color-link default "#cccccc"
