@@ -26,18 +26,18 @@ function packages() {
   go install github.com/justjanne/powerline-go@latest
 
   # Get dotfiles
-  rm -rf $DIR
-  git clone https://github.com/triciopo/dotfiles.git $DIR
-  mkdir -p $HOME/.config
+  rm -rf "$DIR"
+  git clone https://github.com/triciopo/dotfiles.git "$DIR"
+  mkdir -p "$HOME"/.config
 }
 
 # Install dotfiles
 function install() {
   for dotfile in "${!dotfiles[@]}"; do
-    read -p "Install $dotfile? [Y/N] " opt
+    read -rp "Install $dotfile? [Y/N] " opt
       case $opt in
         "Y"|"y")
-          rm -rf "$HOME/$dotfile"
+          rm -rf "$HOME/${dotfile:?}"
 	        ln -s "$DIR/${dotfiles[$dotfile]}" "$HOME/$dotfile"
 	        ;;
         *) : return ;;
