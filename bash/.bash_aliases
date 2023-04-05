@@ -30,7 +30,7 @@ alias g='git status'
 alias ga='git add'
 alias gaa='git add .'
 alias gc='git commit -m'
-alias gco="git checkout"
+alias gco='git checkout'
 alias gs='git status'
 alias gd='git diff'
 alias gp='git push'
@@ -38,3 +38,4 @@ alias gpl='git pull'
 alias gl='git log --graph --pretty=format:"%C(bold green)%h %C(bold blue)•%Creset %<(70,trunc)%s (%cN, %cr) %C(auto)%d"'
 
 alias sc='source ~/.bashrc'
+alias aliases='cat ~/.bash_aliases'

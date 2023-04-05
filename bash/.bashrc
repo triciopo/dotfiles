@@ -37,3 +37,13 @@ shopt -s cmdhist
 
 # Bash completion
 [ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
+
+# Functions
+cd() {
+    builtin cd "$@"
+    ls --color --group-directories-first -Xh
+}
+
+-() {
+    builtin cd -
+}
