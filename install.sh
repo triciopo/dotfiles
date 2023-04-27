@@ -5,6 +5,7 @@ DIR=$HOME/dotfiles
 declare -A dotfiles=(
   [".bashrc"]="bash/.bashrc"
   [".bash_aliases"]="bash/.bash_aliases"
+  [".bash_profile"]="bash/.bash_profile"
   [".tmux.conf"]="tmux/.tmux.conf"
   [".nanorc"]="nano/.nanorc"
   [".config/micro"]="micro"
@@ -13,14 +14,13 @@ declare -A dotfiles=(
 
 # Update and install necessary packages
 function packages() {
-  sudo apt update -y && sudo apt upgrade -y
-  sudo apt install -y \
-       tmux \
-       micro \
-       nano \
-       htop \
-       git \
-       golang-go
+  if command -v apt &> /dev/null; then
+    sudo apt update -y && sudo apt upgrade -y
+    sudo apt install -y tmux micro nano htop git golang-go
+  elif command -v pacman &> /dev/null; then
+    sudo pacman -Syu --noconfirm
+    sudo pacman -S --noconfirm tmux micro nano htop git go
+  fi
 
   # Install powerline
   go install github.com/justjanne/powerline-go@latest
@@ -40,7 +40,7 @@ function install() {
           rm -rf "$HOME/${dotfile:?}"
 	        ln -s "$DIR/${dotfiles[$dotfile]}" "$HOME/$dotfile"
 	        ;;
-        *) : return ;;
+        *) echo "Skipping $dotfile" return ;;
       esac
   done
   printf "\nDone!\n"
