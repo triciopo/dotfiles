@@ -11,8 +11,6 @@
 #
 ######################################################################
 GOPATH=$HOME/go
-export EDITOR=micro
-export VISUAL=micro
 
 set -o vi
 
