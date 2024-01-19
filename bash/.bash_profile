@@ -4,6 +4,8 @@
 
 export EDITOR=micro
 export VISUAL=micro
-export PATH="$HOME/.local/bin:$HOME/.fly/bin:$PATH"
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
